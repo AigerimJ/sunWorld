@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>107596839911-jvv8h3ndnr8vn221k3emgk865ncavcso.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.107596839911-jvv8h3ndnr8vn221k3emgk865ncavcso</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCnedwkVABZ1ujg2SI9S7irNl5yZm6CIQY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>107596839911</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>JAR.gameOfChats</string>
+	<key>PROJECT_ID</key>
+	<string>gameofchats-a83c7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gameofchats-a83c7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:107596839911:ios:c7ffdc4dc364bb48</string>
+	<key>DATABASE_URL</key>
+	<string>https://gameofchats-a83c7.firebaseio.com</string>
+</dict>
+</plist>
