@@ -94,5 +94,12 @@ class PostCell: UITableViewCell {
 
         likeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20).isActive = true
     }
+    
+    class func calculateCellHeight(for text: NSString) -> CGFloat {
+        
+        let textBoundedWidth = UIScreen.main.bounds.width - profileImageView.height
+        let textSize = CGSize(width: textBoundedWidth, height: <#T##CGFloat#>)
+        
+    }
 
 }

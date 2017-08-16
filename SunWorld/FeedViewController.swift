@@ -78,7 +78,7 @@ class FeedController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.cellIdentifier, for: indexPath) as! PostCell
         cell.nameLabel.text = "NameLabel"
-        cell.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 0).isActive = true
+//        cell.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 0).isActive = true
         cell.postLabel.text = posts[indexPath.section]
         cell.profileImageView.image = #imageLiteral(resourceName: "user.png")
         return cell

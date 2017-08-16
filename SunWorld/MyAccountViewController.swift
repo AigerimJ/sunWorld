@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import Firebase
 
 class MyAccountViewController: UIViewController {
     
@@ -50,7 +50,8 @@ class MyAccountViewController: UIViewController {
         view.addSubview(usernameLabel)
         view.addSubview(profileImageView)
         
-        usernameLabel.text = "Name"//user.text
+        usernameLabel.text = FIRAuth.auth()?.currentUser?.email
+        
         usernameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         usernameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
         profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
