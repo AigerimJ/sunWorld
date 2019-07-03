@@ -41,7 +41,11 @@ class MessagesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+=======
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         
         let image = UIImage(named: "new_message_icon")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(handleNewMessage))
@@ -61,14 +65,22 @@ class MessagesController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
+<<<<<<< HEAD
+        guard let uid = Auth.auth().currentUser?.uid else {
+=======
         guard let uid = FIRAuth.auth()?.currentUser?.uid else {
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
             return
         }
         
         let message = self.messages[indexPath.row]
         
         if let chatPartnerId = message.chatPartnerId() {
+<<<<<<< HEAD
+            Database.database().reference().child("user-messages").child(uid).child(chatPartnerId).removeValue(completionBlock: { (error, ref) in
+=======
             FIRDatabase.database().reference().child("user-messages").child(uid).child(chatPartnerId).removeValue(completionBlock: { (error, ref) in
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
                 
                 if error != nil {
                     print("Failed to delete message:", error!)
@@ -78,7 +90,11 @@ class MessagesController: UITableViewController {
                 self.messagesDictionary.removeValue(forKey: chatPartnerId)
                 self.attemptReloadOfTable()
                 
+<<<<<<< HEAD
+                //                this is one way of updating the table, but its actually not that safe..
+=======
                 //                //this is one way of updating the table, but its actually not that safe..
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
                 //                self.messages.removeAtIndex(indexPath.row)
                 //                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 
@@ -90,6 +106,17 @@ class MessagesController: UITableViewController {
     var messagesDictionary = [String: Message]()
     
     func observeUserMessages() {
+<<<<<<< HEAD
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        let ref = Database.database().reference().child("user-messages").child(uid)
+        ref.observe(.childAdded, with: { (snapshot) in
+            
+            let userId = snapshot.key
+            Database.database().reference().child("user-messages").child(uid).child(userId).observe(.childAdded, with: { (snapshot) in
+=======
         guard let uid = FIRAuth.auth()?.currentUser?.uid else {
             return
         }
@@ -99,6 +126,7 @@ class MessagesController: UITableViewController {
             
             let userId = snapshot.key
             FIRDatabase.database().reference().child("user-messages").child(uid).child(userId).observe(.childAdded, with: { (snapshot) in
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
                 
                 let messageId = snapshot.key
                 self.fetchMessageWithMessageId(messageId)
@@ -118,7 +146,11 @@ class MessagesController: UITableViewController {
     }
     
     fileprivate func fetchMessageWithMessageId(_ messageId: String) {
+<<<<<<< HEAD
+        let messagesReference = Database.database().reference().child("messages").child(messageId)
+=======
         let messagesReference = FIRDatabase.database().reference().child("messages").child(messageId)
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         
         messagesReference.observeSingleEvent(of: .value, with: { (snapshot) in
             
@@ -180,7 +212,11 @@ class MessagesController: UITableViewController {
             return
         }
         
+<<<<<<< HEAD
+        let ref = Database.database().reference().child("users").child(chatPartnerId)
+=======
         let ref = FIRDatabase.database().reference().child("users").child(chatPartnerId)
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let dictionary = snapshot.value as? [String: AnyObject] else {
                 return
@@ -201,6 +237,17 @@ class MessagesController: UITableViewController {
     }
     
     func checkIfUserIsLoggedIn() {
+<<<<<<< HEAD
+        if Auth.auth().currentUser?.uid == nil {
+            perform(#selector(handleLogout), with: nil, afterDelay: 0)
+        } else {
+            fetchUserAndSetupNavBarTitle()
+        }
+    }
+    
+    func fetchUserAndSetupNavBarTitle() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+=======
 //        if FIRAuth.auth()?.currentUser?.uid == nil {
 //            perform(#selector(handleLogout), with: nil, afterDelay: 0)
 //        } else {
@@ -210,11 +257,16 @@ class MessagesController: UITableViewController {
     
     func fetchUserAndSetupNavBarTitle() {
         guard let uid = FIRAuth.auth()?.currentUser?.uid else {
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
             //for some reason uid = nil
             return
         }
         
+<<<<<<< HEAD
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+=======
         FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 //                self.navigationItem.title = dictionary["name"] as? String
@@ -284,6 +336,20 @@ class MessagesController: UITableViewController {
         navigationController?.pushViewController(chatLogController, animated: true)
     }
     
+<<<<<<< HEAD
+    func handleLogout() {
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        
+        let loginController = LoginController()
+        loginController.messagesController = self
+        present(loginController, animated: true, completion: nil)
+    }
+=======
 //    func handleLogout() {
 //        
 //        do {
@@ -296,6 +362,7 @@ class MessagesController: UITableViewController {
 //        loginController.messagesController = self
 //        present(loginController, animated: true, completion: nil)
 //    }
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
     
 }
 

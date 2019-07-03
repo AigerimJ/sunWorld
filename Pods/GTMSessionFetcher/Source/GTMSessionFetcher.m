@@ -89,7 +89,11 @@ GTM_ASSUME_NONNULL_END
 @property(atomic, strong, readwrite, GTM_NULLABLE) NSData *downloadResumeData;
 
 #if GTM_BACKGROUND_TASK_FETCHING
+<<<<<<< HEAD
+// Should always be accessed within an @synchronized(self).
+=======
 // Should always be accessed within an @synchranized(self).
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @property(assign, nonatomic) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
 #endif
 
@@ -369,6 +373,17 @@ static GTMSessionFetcherTestBlock GTM_NULLABLE_TYPE gGlobalTestBlock;
   [self beginFetchMayDelay:YES mayAuthorize:YES];
 }
 
+<<<<<<< HEAD
+// Begin fetching the URL for a retry fetch. The delegate and completion handler
+// are already provided, and do not need to be copied.
+- (void)beginFetchForRetry {
+  GTMSessionCheckNotSynchronized(self);
+
+  [self beginFetchMayDelay:YES mayAuthorize:YES];
+}
+
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 - (GTMSessionFetcherCompletionHandler)completionHandlerWithTarget:(GTM_NULLABLE_TYPE id)target
                                                 didFinishSelector:(GTM_NULLABLE_TYPE SEL)finishedSelector {
   GTMSessionFetcherAssertValidSelector(target, finishedSelector, @encode(GTMSessionFetcher *),
@@ -575,8 +590,18 @@ static GTMSessionFetcherTestBlock GTM_NULLABLE_TYPE gGlobalTestBlock;
         // +backgroundSessionConfiguration: on iOS 8.
         if ([NSURLSessionConfiguration respondsToSelector:@selector(backgroundSessionConfigurationWithIdentifier:)]) {
           // Running on iOS 8+/OS X 10.10+.
+<<<<<<< HEAD
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
+// Disable unguarded availability warning as we can't use the @availability macro until we require
+// all clients to build with Xcode 9 or above.
           _configuration =
               [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:sessionIdentifier];
+#pragma clang diagnostic pop
+=======
+          _configuration =
+              [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:sessionIdentifier];
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         } else {
           // Running on iOS 7/OS X 10.9.
           _configuration =
@@ -801,7 +826,16 @@ static GTMSessionFetcherTestBlock GTM_NULLABLE_TYPE gGlobalTestBlock;
     BOOL hasTaskPriority = [newSessionTask respondsToSelector:@selector(setPriority:)];
 #endif
     if (hasTaskPriority) {
+<<<<<<< HEAD
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
+// Disable unguarded availability warning as we can't use the @availability macro until we require
+// all clients to build with Xcode 9 or above.
       newSessionTask.priority = _taskPriority;
+#pragma clang diagnostic pop
+=======
+      newSessionTask.priority = _taskPriority;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
     }
   }
 
@@ -1319,7 +1353,11 @@ NSData * GTM_NULLABLE_TYPE GTMDataFromInputStream(NSInputStream *inputStream, NS
   return fetchers;
 }
 
+<<<<<<< HEAD
+#if TARGET_OS_IPHONE && !TARGET_OS_WATCH
+=======
 #if TARGET_OS_IPHONE
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 + (void)application:(UIApplication *)application
     handleEventsForBackgroundURLSession:(NSString *)identifier
                       completionHandler:(GTMSessionFetcherSystemCompletionHandler)completionHandler {
@@ -1881,8 +1919,11 @@ NSData * GTM_NULLABLE_TYPE GTMDataFromInputStream(NSInputStream *inputStream, NS
 - (void)retryFetch {
   [self stopFetchReleasingCallbacks:NO];
 
+<<<<<<< HEAD
+=======
   GTMSessionFetcherCompletionHandler completionHandler;
 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
   // A retry will need a configuration with a fresh session identifier.
   @synchronized(self) {
     GTMSessionMonitorSynchronized(self);
@@ -1897,11 +1938,17 @@ NSData * GTM_NULLABLE_TYPE GTMDataFromInputStream(NSInputStream *inputStream, NS
       // the service's old one has become invalid.
       _session = nil;
     }
+<<<<<<< HEAD
+  }  // @synchronized(self)
+
+  [self beginFetchForRetry];
+=======
 
     completionHandler = _completionHandler;
   }  // @synchronized(self)
 
   [self beginFetchWithCompletionHandler:completionHandler];
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 }
 
 - (BOOL)waitForCompletionWithTimeout:(NSTimeInterval)timeoutInSeconds {
@@ -1961,7 +2008,11 @@ NSData * GTM_NULLABLE_TYPE GTMDataFromInputStream(NSInputStream *inputStream, NS
   gGlobalTestBlock = [block copy];
 }
 
+<<<<<<< HEAD
+#if GTM_BACKGROUND_TASK_FETCHING
+=======
 #if TARGET_OS_IPHONE
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 static GTM_NULLABLE_TYPE id<GTMUIApplicationProtocol> gSubstituteUIApp;
 
@@ -1997,7 +2048,11 @@ static GTM_NULLABLE_TYPE id<GTMUIApplicationProtocol> gSubstituteUIApp;
   }
   return app;
 }
+<<<<<<< HEAD
+#endif //  GTM_BACKGROUND_TASK_FETCHING
+=======
 #endif //  TARGET_OS_IPHONE
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 #pragma mark NSURLSession Delegate Methods
 
@@ -2848,7 +2903,12 @@ didCompleteWithError:(NSError *)error {
           // Create an error.
           NSDictionary *userInfo = nil;
           if (_downloadedData.length > 0) {
+<<<<<<< HEAD
+            NSMutableData *data = _downloadedData;
+            userInfo = @{ kGTMSessionFetcherStatusDataKey : data };
+=======
             userInfo = @{ kGTMSessionFetcherStatusDataKey : _downloadedData };
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
           }
           error = [NSError errorWithDomain:kGTMSessionFetcherStatusDomain
                                       code:status
@@ -3026,7 +3086,12 @@ didCompleteWithError:(NSError *)error {
     if (canRetry) {
       NSDictionary *userInfo = nil;
       if (_downloadedData.length > 0) {
+<<<<<<< HEAD
+        NSMutableData *data = _downloadedData;
+        userInfo = @{ kGTMSessionFetcherStatusDataKey : data };
+=======
         userInfo = @{ kGTMSessionFetcherStatusDataKey : _downloadedData };
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
       }
       NSError *statusError = [NSError errorWithDomain:kGTMSessionFetcherStatusDomain
                                                  code:status
@@ -4381,7 +4446,16 @@ NSString *GTMFetcherSystemVersionString(void) {
     if (hasOperatingSystemVersion) {
 #if defined(MAC_OS_X_VERSION_10_10)
       // A reference to NSOperatingSystemVersion requires the 10.10 SDK.
+<<<<<<< HEAD
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
+// Disable unguarded availability warning as we can't use the @availability macro until we require
+// all clients to build with Xcode 9 or above.
       NSOperatingSystemVersion version = procInfo.operatingSystemVersion;
+#pragma clang diagnostic pop
+=======
+      NSOperatingSystemVersion version = procInfo.operatingSystemVersion;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
       versString = [NSString stringWithFormat:@"%zd.%zd.%zd",
                     version.majorVersion, version.minorVersion, version.patchVersion];
 #else

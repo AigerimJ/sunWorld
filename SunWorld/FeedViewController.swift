@@ -7,6 +7,56 @@
 //
 
 import UIKit
+<<<<<<< HEAD
+import Firebase
+
+class FeedController: UITableViewController {
+    
+    var posts = [Post]()
+    
+    var postsDictionary = [String: Post]()
+    var timer: Timer?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let image = #imageLiteral(resourceName: "plus")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(handleNewMessage))
+        
+        tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.cellIdentifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        download()
+    }
+    
+    func handleNewMessage(){
+        self.present(NewPostController(), animated: true, completion: nil)
+    }
+    
+    func download(){
+        Post.getPosts { (posts, error) in
+            if let _error = error {
+                print(_error.localizedDescription)
+                return
+            }
+            guard let posts = posts else { return }
+            self.posts = posts
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    
+    func handleReloadTable() {
+        self.posts.sort(by: { (post1, post2) -> Bool in
+            return (post1.timestamp?.int32Value)! > (post2.timestamp?.int32Value)!
+        })
+        DispatchQueue.main.async(execute: {
+            self.tableView.reloadData()
+        })
+    }
+    
+
+=======
 
 class FeedController: UITableViewController {
 
@@ -68,10 +118,51 @@ class FeedController: UITableViewController {
 
     }
     
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+<<<<<<< HEAD
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.cellIdentifier, for: indexPath) as! PostCell
+        cell.nameLabel.text = posts[indexPath.section].author
+        cell.profileImageView.image = #imageLiteral(resourceName: "male")
+
+        if let profileImageUrl = posts[indexPath.section].userProfileImageUrl {
+            cell.profileImageView.loadImageUsingCacheWithUrlString(profileImageUrl)
+        }
+        
+        cell.postView.text = posts[indexPath.section].text
+        if posts[indexPath.section].type == "health" {
+            cell.lineView.backgroundColor = .blue
+        } else if posts[indexPath.section].type == "study" {
+            cell.lineView.backgroundColor = .orange
+        } else {
+            cell.lineView.backgroundColor = .darkGray
+        }
+        
+        let commentVC = CommentsViewController()
+        commentVC.postId = posts[indexPath.section].id
+
+//        var postId = posts[indexPath.section].id
+        cell.commentButton.addTarget(self, action: #selector(openComments), for: UIControlEvents.touchUpInside)
+        handleReloadTable()
+
+        return cell
+        
+        
+    }
+    
+    func openComments(){
+        print("Opening comments...")
+        self.present(CommentsViewController(), animated: true, completion: nil)
+    }
+=======
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,10 +177,25 @@ class FeedController: UITableViewController {
     
     
 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
+<<<<<<< HEAD
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let postText = posts[indexPath.section].text //-1
+        return PostCell.calculateCellHeight(for: postText as! NSString)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    
+    
+=======
 
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -102,5 +208,6 @@ class FeedController: UITableViewController {
 
     
 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 }
 

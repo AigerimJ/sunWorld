@@ -33,7 +33,11 @@ class UserCell: UITableViewCell {
     fileprivate func setupNameAndProfileImage() {
         
         if let id = message?.chatPartnerId() {
+<<<<<<< HEAD
+            let ref = Database.database().reference().child("users").child(id)
+=======
             let ref = FIRDatabase.database().reference().child("users").child(id)
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 if let dictionary = snapshot.value as? [String: AnyObject] {

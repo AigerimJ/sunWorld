@@ -1,4 +1,23 @@
 /*
+<<<<<<< HEAD
+ * Copyright 2017 Google
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#import <Foundation/Foundation.h>
+#import "FIRDatabaseSwiftNameSupport.h"
+=======
  * Firebase iOS Client Library
  *
  * Copyright © 2013 Firebase - All Rights Reserved
@@ -27,6 +46,7 @@
  */
 
 #import <Foundation/Foundation.h>
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 #import "FIRDataEventType.h"
 #import "FIRDataSnapshot.h"
 
@@ -37,7 +57,11 @@ NS_ASSUME_NONNULL_BEGIN
  * are returned by observeEventType: and and can later be passed to removeObserverWithHandle: to
  * stop receiving updates.
  */
+<<<<<<< HEAD
+typedef NSUInteger FIRDatabaseHandle FIR_SWIFT_NAME(DatabaseHandle);
+=======
 typedef NSUInteger FIRDatabaseHandle;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * A FIRDatabaseQuery instance represents a query over the data at a particular location.
@@ -46,6 +70,10 @@ typedef NSUInteger FIRDatabaseHandle;
  * on a FIRDatabaseReference. The query methods can be chained to further specify the data you are interested in
  * observing
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(DatabaseQuery)
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @interface FIRDatabaseQuery : NSObject
 
 

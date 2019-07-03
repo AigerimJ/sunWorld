@@ -1,4 +1,25 @@
 /*
+<<<<<<< HEAD
+ * Copyright 2017 Google
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#import <Foundation/Foundation.h>
+#import "FIRDatabaseQuery.h"
+#import "FIRDatabase.h"
+#import "FIRDatabaseSwiftNameSupport.h"
+=======
  * Firebase iOS Client Library
  *
  * Copyright © 2013 Firebase - All Rights Reserved
@@ -30,6 +51,7 @@
 #import <Foundation/Foundation.h>
 #import "FIRDatabaseQuery.h"
 #import "FIRDatabase.h"
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 #import "FIRDataSnapshot.h"
 #import "FIRMutableData.h"
 #import "FIRTransactionResult.h"
@@ -48,6 +70,10 @@ NS_ASSUME_NONNULL_BEGIN
  * to read data (ie. observeEventType:withBlock:), write data (ie. setValue:), and to
  * create new FIRDatabaseReferences (ie. child:).
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(DatabaseReference)
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @interface FIRDatabaseReference : FIRDatabaseQuery
 
 
@@ -85,8 +111,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Write data to this Firebase Database location.
 
+<<<<<<< HEAD
+This will overwrite any data at this location and all child locations.
+
+=======
 This will overwrite any data at this location and all child locations. 
  
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 Data types that can be set are:
 
 - NSString -- @"Hello World"
@@ -97,7 +128,11 @@ Data types that can be set are:
 The effect of the write will be visible immediately and the corresponding
 events will be triggered. Synchronization of the data to the Firebase Database
 servers will also be started.
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 Passing null for the new value is equivalent to calling remove:;
 all data at this location or any child location will be deleted.
 
@@ -142,7 +177,11 @@ is meant to be preserved, you should use setValue:andPriority: instead.
 
 /**
  * Remove the data at this Firebase Database location. Any data at child locations will also be deleted.
+<<<<<<< HEAD
+ *
+=======
  * 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * The effect of the delete will be visible immediately and the corresponding events
  * will be triggered. Synchronization of the delete to the Firebase Database servers will
  * also be started.
@@ -176,7 +215,11 @@ is meant to be preserved, you should use setValue:andPriority: instead.
  * Children with a string as their priority come last. They are sorted lexicographically by priority.
  * Whenever two children have the same priority (including no priority), they are sorted by key. Numeric
  * keys come first (sorted numerically), followed by the remaining keys (sorted lexicographically).
+<<<<<<< HEAD
+ *
+=======
  * 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * Note that priorities are parsed and ordered as IEEE 754 double-precision floating-point numbers.
  * Keys are always stored as strings and are treated as numbers only when they can be parsed as a
  * 32-bit integer
@@ -204,7 +247,11 @@ is meant to be preserved, you should use setValue:andPriority: instead.
 - (void) updateChildValues:(NSDictionary *)values;
 
 /**
+<<<<<<< HEAD
+ * The same as update: with a block that is called once the update has been committed to the
+=======
  * The same as update: with a block that is called once the update has been committed to the 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * Firebase Database servers
  *
  * @param values A dictionary of the keys to change and their new values
@@ -564,7 +611,11 @@ is meant to be preserved, you should use setValue:andPriority: instead.
 
 /**
  * Cancel any operations that are set to run on disconnect. If you previously called onDisconnectSetValue:,
+<<<<<<< HEAD
+ * onDisconnectRemoveValue:, or onDisconnectUpdateChildValues:, and no longer want the values updated when the
+=======
  * onDisconnectRemoveValue:, or onDisconnectUpdateChildValues:, and no longer want the values updated when the 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * connection is lost, call cancelDisconnectOperations:
  */
 - (void) cancelDisconnectOperations;
@@ -586,6 +637,21 @@ is meant to be preserved, you should use setValue:andPriority: instead.
  * Manually disconnect the Firebase Database client from the server and disable automatic reconnection.
  *
  * The Firebase Database client automatically maintains a persistent connection to the Firebase Database server,
+<<<<<<< HEAD
+ * which will remain active indefinitely and reconnect when disconnected. However, the goOffline( )
+ * and goOnline( ) methods may be used to manually control the client connection in cases where
+ * a persistent connection is undesirable.
+ *
+ * While offline, the Firebase Database client will no longer receive data updates from the server. However,
+ * all database operations performed locally will continue to immediately fire events, allowing
+ * your application to continue behaving normally. Additionally, each operation performed locally
+ * will automatically be queued and retried upon reconnection to the Firebase Database server.
+ *
+ * To reconnect to the Firebase Database server and begin receiving remote events, see goOnline( ).
+ * Once the connection is reestablished, the Firebase Database client will transmit the appropriate data
+ * and fire the appropriate events so that your client "catches up" automatically.
+ *
+=======
  * which will remain active indefinitely and reconnect when disconnected. However, the goOffline( ) 
  * and goOnline( ) methods may be used to manually control the client connection in cases where 
  * a persistent connection is undesirable.
@@ -599,6 +665,7 @@ is meant to be preserved, you should use setValue:andPriority: instead.
  * Once the connection is reestablished, the Firebase Database client will transmit the appropriate data
  * and fire the appropriate events so that your client "catches up" automatically.
  * 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * Note: Invoking this method will impact all Firebase Database connections.
  */
 + (void) goOffline;
@@ -607,6 +674,18 @@ is meant to be preserved, you should use setValue:andPriority: instead.
  * Manually reestablish a connection to the Firebase Database server and enable automatic reconnection.
  *
  * The Firebase Database client automatically maintains a persistent connection to the Firebase Database server,
+<<<<<<< HEAD
+ * which will remain active indefinitely and reconnect when disconnected. However, the goOffline( )
+ * and goOnline( ) methods may be used to manually control the client connection in cases where
+ * a persistent connection is undesirable.
+ *
+ * This method should be used after invoking goOffline( ) to disable the active connection.
+ * Once reconnected, the Firebase Database client will automatically transmit the proper data and fire
+ * the appropriate events so that your client "catches up" automatically.
+ *
+ * To disconnect from the Firebase Database server, see goOffline( ).
+ *
+=======
  * which will remain active indefinitely and reconnect when disconnected. However, the goOffline( ) 
  * and goOnline( ) methods may be used to manually control the client connection in cases where 
  * a persistent connection is undesirable.
@@ -617,6 +696,7 @@ is meant to be preserved, you should use setValue:andPriority: instead.
  * 
  * To disconnect from the Firebase Database server, see goOffline( ).
  * 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * Note: Invoking this method will impact all Firebase Database connections.
  */
 + (void) goOnline;

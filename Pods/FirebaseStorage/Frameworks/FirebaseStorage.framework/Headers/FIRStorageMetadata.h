@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+/*
+ * Copyright 2017 Google
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#import <Foundation/Foundation.h>
+
+#import "FIRStorageSwiftNameSupport.h"
+
+=======
 // clang-format off
 /** @file FIRStorageMetadata.h
     @brief Firebase SDK
@@ -9,6 +31,7 @@
 
 #import <Foundation/Foundation.h>
 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @class FIRStorageReference;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -20,6 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
  * Objects#resource docs.
  * @see https://cloud.google.com/storage/docs/json_api/v1/objects#resource
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(StorageMetadata)
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @interface FIRStorageMetadata : NSObject<NSCopying>
 
 /**
@@ -108,13 +135,22 @@ NS_ASSUME_NONNULL_BEGIN
  * Creates an instanece of FIRStorageMetadata from the contents of a dictionary.
  * @return An instance of FIRStorageMetadata that represents the contents of a dictionary.
  */
+<<<<<<< HEAD
+- (nullable instancetype)initWithDictionary:(NSDictionary <NSString *, id>*)dictionary
+    NS_DESIGNATED_INITIALIZER;
+=======
 - (nullable instancetype)initWithDictionary:(NSDictionary *)dictionary NS_DESIGNATED_INITIALIZER;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * Creates an NSDictionary from the contents of the metadata.
  * @return An NSDictionary that represents the contents of the metadata.
  */
+<<<<<<< HEAD
+- (NSDictionary <NSString *, id>*)dictionaryRepresentation;
+=======
 - (NSDictionary *)dictionaryRepresentation;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * Determines if the current metadata represents a "file".

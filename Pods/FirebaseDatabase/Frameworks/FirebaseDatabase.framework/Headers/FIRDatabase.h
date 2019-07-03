@@ -1,4 +1,19 @@
 /*
+<<<<<<< HEAD
+ * Copyright 2017 Google
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+=======
  * Firebase iOS Client Library
  *
  * Copyright © 2013 Firebase - All Rights Reserved
@@ -24,10 +39,15 @@
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  */
 
 #import <Foundation/Foundation.h>
 #import "FIRDatabaseReference.h"
+<<<<<<< HEAD
+#import "FIRDatabaseSwiftNameSupport.h"
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 @class FIRApp;
 
@@ -38,14 +58,33 @@ NS_ASSUME_NONNULL_BEGIN
  * [FIRDatabase database]. To access a location in the database and read or write data,
  * use [FIRDatabase reference].
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(Database)
 @interface FIRDatabase : NSObject
 
 /**
+ * The NSObject initializer that has been marked as unavailable. Use the `database`
+ * method instead
+ *
+ * @return An instancetype instance
+*/
++ (instancetype) init __attribute__((unavailable("use the database method instead")));
+
+/**
+=======
+@interface FIRDatabase : NSObject
+
+/**
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * Gets the instance of FIRDatabase for the default FIRApp.
  *
  * @return A FIRDatabase instance.
  */
+<<<<<<< HEAD
++ (FIRDatabase *) database FIR_SWIFT_NAME(database());
+=======
 + (FIRDatabase *) database NS_SWIFT_NAME(database());
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * Gets an instance of FIRDatabase for a specific FIRApp.
@@ -53,7 +92,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @param app The FIRApp to get a FIRDatabase for.
  * @return A FIRDatabase instance.
  */
+<<<<<<< HEAD
++ (FIRDatabase *) databaseForApp:(FIRApp *)app FIR_SWIFT_NAME(database(app:));
+=======
 + (FIRDatabase *) databaseForApp:(FIRApp*)app NS_SWIFT_NAME(database(app:));
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /** The FIRApp instance to which this FIRDatabase belongs. */
 @property (weak, readonly, nonatomic) FIRApp *app;
@@ -76,7 +119,11 @@ NS_ASSUME_NONNULL_BEGIN
  * within this Firebase Database.  To create a FIRDatabaseReference to a different database,
  * create a FIRApp} with a FIROptions object configured with the appropriate database URL.
  *
+<<<<<<< HEAD
+ * @param databaseUrl A URL to a path within your database.
+=======
  * @param url A URL to a path within your database.
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * @return A FIRDatabaseReference for the provided URL.
 */
 - (FIRDatabaseReference *) referenceFromURL:(NSString *)databaseUrl;
@@ -115,7 +162,11 @@ NS_ASSUME_NONNULL_BEGIN
  * application.
  *
  */
+<<<<<<< HEAD
+@property (nonatomic) BOOL persistenceEnabled FIR_SWIFT_NAME(isPersistenceEnabled);
+=======
 @property (nonatomic) BOOL persistenceEnabled;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * By default the Firebase Database client will use up to 10MB of disk space to cache data. If the cache grows beyond

@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+/*
+ * Copyright 2017 Google
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+=======
 // clang-format off
 /** @file FIRStorage.h
     @brief Firebase SDK
@@ -6,10 +23,15 @@
     https://developers.google.com/terms/
  */
 // clang-format on
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 #import <Foundation/Foundation.h>
 
 #import "FIRStorageConstants.h"
+<<<<<<< HEAD
+#import "FIRStorageSwiftNameSupport.h"
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 @class FIRApp;
 @class FIRStorageReference;
@@ -17,7 +39,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** Project version string for FirebaseStorage. */
+<<<<<<< HEAD
+FOUNDATION_EXPORT const unsigned char *const FIRStorageVersionString;
+=======
 FOUNDATION_EXPORT const unsigned char *const FirebaseStorageVersionString;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * FirebaseStorage is a service that supports uploading and downloading binary objects,
@@ -30,27 +56,43 @@ FOUNDATION_EXPORT const unsigned char *const FirebaseStorageVersionString;
  * If you call [FIRStorage storageForApp:] and provide a custom instance of FIRApp,
  * the storage location will be specified via the FIROptions#storageBucket property.
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(Storage)
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @interface FIRStorage : NSObject
 
 /**
  * Creates an instance of FIRStorage, configured with the default FIRApp.
  * @return the FIRStorage instance, initialized with the default FIRApp.
  */
+<<<<<<< HEAD
++ (instancetype)storage FIR_SWIFT_NAME(storage());
+=======
 + (instancetype)storage NS_SWIFT_NAME(storage());
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * Creates an instance of FIRStorage, configured with the custom FIRApp @a app.
  * @param app The custom FIRApp used for initialization.
  * @return the FIRStorage instance, initialized with the custom FIRApp.
  */
+<<<<<<< HEAD
++ (instancetype)storageForApp:(FIRApp *)app FIR_SWIFT_NAME(storage(app:));
+=======
 + (instancetype)storageForApp:(FIRApp *)app NS_SWIFT_NAME(storage(app:));
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * Creates an instance of FIRStorage, configured with a custom storage bucket @a url.
  * @param url The gs:// url to your Firebase Storage Bucket.
  * @return the FIRStorage instance, initialized with the custom FIRApp.
  */
+<<<<<<< HEAD
++ (instancetype)storageWithURL:(NSString *)url FIR_SWIFT_NAME(storage(url:));
+=======
 + (instancetype)storageWithURL:(NSString *)url NS_SWIFT_NAME(storage(url:));
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * Creates an instance of FIRStorage, configured with a custom FIRApp @a app and a custom storage
@@ -60,7 +102,11 @@ FOUNDATION_EXPORT const unsigned char *const FirebaseStorageVersionString;
  * @return the FIRStorage instance, initialized with the custom FIRApp.
  */
 + (instancetype)storageForApp:(FIRApp *)app
+<<<<<<< HEAD
+                          URL:(NSString *)url FIR_SWIFT_NAME(storage(app:url:));
+=======
                           URL:(NSString *)url NS_SWIFT_NAME(storage(app:url:));
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * The Firebase App associated with this Firebase Storage instance.

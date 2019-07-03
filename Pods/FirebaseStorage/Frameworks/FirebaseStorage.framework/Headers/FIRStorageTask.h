@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+/*
+ * Copyright 2017 Google
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+=======
 // clang-format off
 /** @file FIRStorageTask.h
     @brief Firebase SDK
@@ -6,11 +23,16 @@
     https://developers.google.com/terms/
  */
 // clang-format on
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 #import <Foundation/Foundation.h>
 
 #import "FIRStorageConstants.h"
 #import "FIRStorageMetadata.h"
+<<<<<<< HEAD
+#import "FIRStorageSwiftNameSupport.h"
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +44,10 @@ NS_ASSUME_NONNULL_BEGIN
  * If no queue is specified by the developer, it defaults to the main queue.
  * Currently not thread safe, so only call methods on the main thread.
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(StorageTask)
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @interface FIRStorageTask : NSObject
 
 /**
@@ -37,6 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
  * implement pause, resume, and cancel, which operate on the task to pause, resume, and cancel
  * operations.
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(StorageTaskManagement)
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @protocol FIRStorageTaskManagement<NSObject>
 
 @required

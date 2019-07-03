@@ -2,6 +2,10 @@ framework module FirebaseInstanceID {
   umbrella header "FirebaseInstanceID.h"
   export *
   module * { export *}
+<<<<<<< HEAD
+  link "z"}
+=======
   link framework "Foundation"
   link framework "UIKit"
 }
+>>>>>>> 709af5596380714c95f70c131124c9c363840824

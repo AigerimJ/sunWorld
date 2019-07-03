@@ -8,7 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		15D92A871A463424E59A7591 /* Pods_SunWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEC7659B27928C25C9F7BC5 /* Pods_SunWorld.framework */; };
+<<<<<<< HEAD
+		191AA4981F473D8500FDBB0D /* NewPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191AA4971F473D8500FDBB0D /* NewPostController.swift */; };
 		193277111F3AF72A000B7EFE /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193277101F3AF72A000B7EFE /* MyAccountViewController.swift */; };
+		19552A291F4D856300836FBF /* PostC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19552A281F4D856300836FBF /* PostC.swift */; };
+		19552A2C1F4E1ABA00836FBF /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19552A2B1F4E1ABA00836FBF /* CommentsViewController.swift */; };
+		19552A2E1F4ED99200836FBF /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19552A2D1F4ED99100836FBF /* CommentCell.swift */; };
+=======
+		193277111F3AF72A000B7EFE /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193277101F3AF72A000B7EFE /* MyAccountViewController.swift */; };
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 		195DFE151F3DB741008DC3F6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195DFE141F3DB741008DC3F6 /* UserCell.swift */; };
 		195DFE171F3DB785008DC3F6 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195DFE161F3DB785008DC3F6 /* ChatMessageCell.swift */; };
 		195DFE191F3DB79A008DC3F6 /* ChatInputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195DFE181F3DB79A008DC3F6 /* ChatInputContainerView.swift */; };
@@ -26,6 +34,22 @@
 		19B172B91F34723600EFE80C /* SunWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19B172B71F34723600EFE80C /* SunWorld.xcdatamodeld */; };
 		19B172BB1F34723600EFE80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B172BA1F34723600EFE80C /* Assets.xcassets */; };
 		19B172BE1F34723600EFE80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B172BC1F34723600EFE80C /* LaunchScreen.storyboard */; };
+<<<<<<< HEAD
+		19B172C81F3476A600EFE80C /* textFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B172C71F3476A600EFE80C /* textFieldCell.swift */; };
+		19B172CC1F349A1400EFE80C /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B172CB1F349A1400EFE80C /* CustomTabBarVC.swift */; };
+		19C773EF1F49A85700AE7774 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C773EE1F49A85700AE7774 /* Post.swift */; };
+		19C773F11F49A8B800AE7774 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C773F01F49A8B800AE7774 /* Comment.swift */; };
+		19C773F31F49A92D00AE7774 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C773F21F49A92D00AE7774 /* Like.swift */; };
+		19DC90EC1F4F66E90002B5B2 /* NewCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC90EB1F4F66E90002B5B2 /* NewCommentController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		191AA4971F473D8500FDBB0D /* NewPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostController.swift; sourceTree = "<group>"; };
+		193277101F3AF72A000B7EFE /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		19552A281F4D856300836FBF /* PostC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostC.swift; sourceTree = "<group>"; };
+		19552A2B1F4E1ABA00836FBF /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		19552A2D1F4ED99100836FBF /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+=======
 		19B172C61F34768100EFE80C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B172C51F34768100EFE80C /* PostCell.swift */; };
 		19B172C81F3476A600EFE80C /* SubPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B172C71F3476A600EFE80C /* SubPostCell.swift */; };
 		19B172CC1F349A1400EFE80C /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B172CB1F349A1400EFE80C /* CustomTabBarVC.swift */; };
@@ -35,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		193277101F3AF72A000B7EFE /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 		195DFE141F3DB741008DC3F6 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		195DFE161F3DB785008DC3F6 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		195DFE181F3DB79A008DC3F6 /* ChatInputContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInputContainerView.swift; sourceTree = "<group>"; };
@@ -54,11 +79,20 @@
 		19B172BA1F34723600EFE80C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19B172BD1F34723600EFE80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B172BF1F34723600EFE80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		19B172C71F3476A600EFE80C /* textFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldCell.swift; sourceTree = "<group>"; };
+		19B172CB1F349A1400EFE80C /* CustomTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
+		19C773EE1F49A85700AE7774 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		19C773F01F49A8B800AE7774 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		19C773F21F49A92D00AE7774 /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		19DC90EB1F4F66E90002B5B2 /* NewCommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentController.swift; sourceTree = "<group>"; };
+=======
 		19B172C51F34768100EFE80C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		19B172C71F3476A600EFE80C /* SubPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubPostCell.swift; sourceTree = "<group>"; };
 		19B172CB1F349A1400EFE80C /* CustomTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
 		19B172D51F34A0ED00EFE80C /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		19B172D71F37A9E800EFE80C /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 		56F2B48A358DBF376F6DAF8D /* Pods-SunWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunWorld/Pods-SunWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		A1612F1BB8489979F72E2CBF /* Pods-SunWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunWorld/Pods-SunWorld.release.xcconfig"; sourceTree = "<group>"; };
 		DFEC7659B27928C25C9F7BC5 /* Pods_SunWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,13 +110,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
+		19552A2A1F4E1A9700836FBF /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				19552A2B1F4E1ABA00836FBF /* CommentsViewController.swift */,
+				19DC90EB1F4F66E90002B5B2 /* NewCommentController.swift */,
+				19552A2D1F4ED99100836FBF /* CommentCell.swift */,
+				19B172C71F3476A600EFE80C /* textFieldCell.swift */,
+			);
+			name = Comments;
+			sourceTree = "<group>";
+		};
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 		195DFE101F3DB58A008DC3F6 /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				195DFE1A1F3DB7C3008DC3F6 /* Extensions.swift */,
+<<<<<<< HEAD
+=======
 				195DFE1C1F3DC651008DC3F6 /* User.swift */,
 				195DFE1E1F3DC663008DC3F6 /* Message.swift */,
 				19B172D71F37A9E800EFE80C /* user.png */,
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				19B172BA1F34723600EFE80C /* Assets.xcassets */,
 				19B172BC1F34723600EFE80C /* LaunchScreen.storyboard */,
 				19B172BF1F34723600EFE80C /* Info.plist */,
@@ -105,8 +156,13 @@
 			isa = PBXGroup;
 			children = (
 				19B172B21F34723600EFE80C /* FeedViewController.swift */,
+<<<<<<< HEAD
+				191AA4971F473D8500FDBB0D /* NewPostController.swift */,
+				19552A281F4D856300836FBF /* PostC.swift */,
+=======
 				19B172C51F34768100EFE80C /* PostCell.swift */,
 				19B172C71F3476A600EFE80C /* SubPostCell.swift */,
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 			);
 			name = Posts;
 			sourceTree = "<group>";
@@ -114,7 +170,10 @@
 		195DFE131F3DB5E3008DC3F6 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
 				19B172D51F34A0ED00EFE80C /* ChatViewController.swift */,
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				195DFE141F3DB741008DC3F6 /* UserCell.swift */,
 				195DFE201F3DC6A8008DC3F6 /* MessagesController.swift */,
 				195DFE221F3DC84C008DC3F6 /* NewMessageController.swift */,
@@ -149,7 +208,13 @@
 				19B172B01F34723600EFE80C /* AppDelegate.swift */,
 				19B172CB1F349A1400EFE80C /* CustomTabBarVC.swift */,
 				193277101F3AF72A000B7EFE /* MyAccountViewController.swift */,
+<<<<<<< HEAD
+				19C773ED1F49A78D00AE7774 /* Models */,
 				195DFE121F3DB5D7008DC3F6 /* Posts */,
+				19552A2A1F4E1A9700836FBF /* Comments */,
+=======
+				195DFE121F3DB5D7008DC3F6 /* Posts */,
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				195DFE131F3DB5E3008DC3F6 /* Chat */,
 				195DFE111F3DB5AE008DC3F6 /* Login */,
 				195DFE101F3DB58A008DC3F6 /* Support */,
@@ -157,6 +222,21 @@
 			path = SunWorld;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		19C773ED1F49A78D00AE7774 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				195DFE1C1F3DC651008DC3F6 /* User.swift */,
+				195DFE1E1F3DC663008DC3F6 /* Message.swift */,
+				19C773EE1F49A85700AE7774 /* Post.swift */,
+				19C773F01F49A8B800AE7774 /* Comment.swift */,
+				19C773F21F49A92D00AE7774 /* Like.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 		2D669F91EBF82089CB4FD4DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +284,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
+<<<<<<< HEAD
+				LastUpgradeCheck = 0900;
+=======
 				LastUpgradeCheck = 0830;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				ORGANIZATIONNAME = "Aigerim Janaliyeva";
 				TargetAttributes = {
 					19B172AC1F34723600EFE80C = {
@@ -240,7 +324,10 @@
 				19B172BE1F34723600EFE80C /* LaunchScreen.storyboard in Resources */,
 				195DFE2B1F3DCA11008DC3F6 /* GoogleService-Info.plist in Resources */,
 				19B172BB1F34723600EFE80C /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
+=======
 				19B172D81F37A9E800EFE80C /* user.png in Resources */,
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +340,18 @@
 			files = (
 			);
 			inputPaths = (
+<<<<<<< HEAD
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SunWorld-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+=======
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
@@ -260,6 +359,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 			showEnvVarsInLog = 0;
 		};
 		BB15AD3C04A91F693CE24615 /* [CP] Embed Pods Frameworks */ = {
@@ -268,9 +368,24 @@
 			files = (
 			);
 			inputPaths = (
+<<<<<<< HEAD
+				"${SRCROOT}/Pods/Target Support Files/Pods-SunWorld/Pods-SunWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+=======
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -301,6 +416,22 @@
 			files = (
 				195DFE1D1F3DC651008DC3F6 /* User.swift in Sources */,
 				19B172B31F34723600EFE80C /* FeedViewController.swift in Sources */,
+<<<<<<< HEAD
+				191AA4981F473D8500FDBB0D /* NewPostController.swift in Sources */,
+				195DFE171F3DB785008DC3F6 /* ChatMessageCell.swift in Sources */,
+				19B172C81F3476A600EFE80C /* textFieldCell.swift in Sources */,
+				193277111F3AF72A000B7EFE /* MyAccountViewController.swift in Sources */,
+				195DFE211F3DC6A8008DC3F6 /* MessagesController.swift in Sources */,
+				19B172B11F34723600EFE80C /* AppDelegate.swift in Sources */,
+				19C773F31F49A92D00AE7774 /* Like.swift in Sources */,
+				19552A291F4D856300836FBF /* PostC.swift in Sources */,
+				195DFE231F3DC84C008DC3F6 /* NewMessageController.swift in Sources */,
+				195DFE151F3DB741008DC3F6 /* UserCell.swift in Sources */,
+				19DC90EC1F4F66E90002B5B2 /* NewCommentController.swift in Sources */,
+				19C773F11F49A8B800AE7774 /* Comment.swift in Sources */,
+				195DFE251F3DC8BF008DC3F6 /* ChatLogController.swift in Sources */,
+				19552A2C1F4E1ABA00836FBF /* CommentsViewController.swift in Sources */,
+=======
 				195DFE171F3DB785008DC3F6 /* ChatMessageCell.swift in Sources */,
 				19B172C81F3476A600EFE80C /* SubPostCell.swift in Sources */,
 				193277111F3AF72A000B7EFE /* MyAccountViewController.swift in Sources */,
@@ -310,14 +441,21 @@
 				195DFE231F3DC84C008DC3F6 /* NewMessageController.swift in Sources */,
 				195DFE151F3DB741008DC3F6 /* UserCell.swift in Sources */,
 				195DFE251F3DC8BF008DC3F6 /* ChatLogController.swift in Sources */,
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				195DFE1B1F3DB7C3008DC3F6 /* Extensions.swift in Sources */,
 				19B172CC1F349A1400EFE80C /* CustomTabBarVC.swift in Sources */,
 				195DFE271F3DC97D008DC3F6 /* LoginController.swift in Sources */,
 				19B172B91F34723600EFE80C /* SunWorld.xcdatamodeld in Sources */,
 				195DFE191F3DB79A008DC3F6 /* ChatInputContainerView.swift in Sources */,
 				195DFE291F3DC9A4008DC3F6 /* LoginController+handlers.swift in Sources */,
+<<<<<<< HEAD
+				195DFE1F1F3DC663008DC3F6 /* Message.swift in Sources */,
+				19C773EF1F49A85700AE7774 /* Post.swift in Sources */,
+				19552A2E1F4ED99200836FBF /* CommentCell.swift in Sources */,
+=======
 				19B172C61F34768100EFE80C /* PostCell.swift in Sources */,
 				195DFE1F1F3DC663008DC3F6 /* Message.swift in Sources */,
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +483,13 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+<<<<<<< HEAD
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+=======
+				CLANG_WARN_BOOL_CONVERSION = YES;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -353,7 +497,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+<<<<<<< HEAD
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+=======
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -396,7 +548,13 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+<<<<<<< HEAD
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+=======
+				CLANG_WARN_BOOL_CONVERSION = YES;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -404,7 +562,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+<<<<<<< HEAD
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+=======
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -2,6 +2,11 @@
 
 #import "FIRAnalytics.h"
 
+<<<<<<< HEAD
+NS_ASSUME_NONNULL_BEGIN
+
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 /**
  * Provides App Delegate handlers to be used in your App Delegate.
  *
@@ -29,14 +34,24 @@
  *     updated and a new snapshot can be taken.
  */
 + (void)handleEventsForBackgroundURLSession:(NSString *)identifier
+<<<<<<< HEAD
+                          completionHandler:(nullable void (^)(void))completionHandler;
+=======
                           completionHandler:(void (^)(void))completionHandler;
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 /**
  * Handles the event when the app is launched by a URL.
  *
+<<<<<<< HEAD
+ * Call this method from [UIApplicationDelegate application:openURL:options:] &#40;on iOS 9.0 and
+ * above&#41;, or [UIApplicationDelegate application:openURL:sourceApplication:annotation:] &#40;on
+ * iOS 8.x and below&#41; in your app.
+=======
  * Call this method from [UIApplicationDelegate application:openURL:options:] (on iOS 9.0 and
  * above), or [UIApplicationDelegate application:openURL:sourceApplication:annotation:] (on iOS 8.x
  * and below) in your app.
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  *
  * @param url The URL resource to open. This resource can be a network resource or a file.
  */
@@ -55,3 +70,9 @@
 + (void)handleUserActivity:(id)userActivity;
 
 @end
+<<<<<<< HEAD
+
+NS_ASSUME_NONNULL_END
+
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824

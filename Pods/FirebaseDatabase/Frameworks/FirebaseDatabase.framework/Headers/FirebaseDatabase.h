@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+#import "FIRDataEventType.h"
+#import "FIRDataSnapshot.h"
+#import "FIRDatabase.h"
+#import "FIRDatabaseQuery.h"
+#import "FIRDatabaseReference.h"
+#import "FIRDatabaseSwiftNameSupport.h"
+#import "FIRMutableData.h"
+#import "FIRServerValue.h"
+#import "FIRTransactionResult.h"
+=======
 /*
  * Firebase iOS Client Library
  *
@@ -39,3 +50,4 @@
 #import "FIRTransactionResult.h"
 
 #endif /* FirebaseDatabase_h */
+>>>>>>> 709af5596380714c95f70c131124c9c363840824

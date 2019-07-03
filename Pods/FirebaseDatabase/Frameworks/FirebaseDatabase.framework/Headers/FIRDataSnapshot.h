@@ -1,4 +1,23 @@
 /*
+<<<<<<< HEAD
+ * Copyright 2017 Google
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#import <Foundation/Foundation.h>
+#import "FIRDatabaseSwiftNameSupport.h"
+=======
  * Firebase iOS Client Library
  *
  * Copyright © 2013 Firebase - All Rights Reserved
@@ -27,6 +46,7 @@
  */
 
 #import <Foundation/Foundation.h>
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -41,6 +61,10 @@ NS_ASSUME_NONNULL_BEGIN
  * They can't be modified and will never change. To modify data at a location,
  * use a FIRDatabaseReference (e.g. with setValue:).
  */
+<<<<<<< HEAD
+FIR_SWIFT_NAME(DataSnapshot)
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 @interface FIRDataSnapshot : NSObject
 
 
@@ -48,7 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Gets a FIRDataSnapshot for the location at the specified relative path.
+<<<<<<< HEAD
+ * The relative path can either be a simple child key (e.g. 'fred')
+=======
  * The relative path can either be a simple child key (e.g. 'fred') 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * or a deeper slash-separated path (e.g. 'fred/name/first'). If the child
  * location has no data, an empty FIRDataSnapshot is returned.
  *
@@ -69,7 +97,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Return YES if the DataSnapshot has any children.
+<<<<<<< HEAD
+ *
+=======
  * 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * @return YES if this snapshot has any children, else NO.
  */
 - (BOOL) hasChildren;
@@ -88,7 +120,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Returns the raw value at this location, coupled with any metadata, such as priority.
  *
+<<<<<<< HEAD
+ * Priorities, where they exist, are accessible under the ".priority" key in instances of NSDictionary.
+=======
  * Priorities, where they exist, are accessible under the ".priority" key in instances of NSDictionary. 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
  * For leaf locations with priorities, the value will be under the ".value" key.
  */
 - (id __nullable) valueInExportFormat;

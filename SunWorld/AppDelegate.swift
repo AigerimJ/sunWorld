@@ -18,12 +18,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+<<<<<<< HEAD
+//        FIRApp.configure()
+//
+//
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//
+////        let feedController = FeedController()
+////
+////        let navController = UINavigationController(rootViewController: feedController)
+//        window?.rootViewController = CustomTabBarVC()
+//        UINavigationBar.appearance().tintColor = .darkGray
+////        UINavigationBar.appearance().semanticContentAttribute = .darkGray
+//        application.statusBarStyle = .lightContent
+//
+//
+//
+////        window?.rootViewController = UINavigationController(rootViewController: MessagesController())
+        
+        
+        FirebaseApp.configure()
+=======
         FIRApp.configure()
 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
+<<<<<<< HEAD
+        if Auth.auth().currentUser?.uid == nil {
+            //login
+            goToLoginViewController()
+        } else {
+            //enter app
+            goToMainViewController()
+        }
+        
+        
+        return true
+    }
+    
+    
+    func goToLoginViewController() {
+        let vc = LoginController()
+        self.window?.rootViewController = vc
+        
+    }
+    
+    func goToMainViewController() {
+        let vc = CustomTabBarVC()
+        self.window?.rootViewController = vc
+        UINavigationBar.appearance().backgroundColor = .red
+    }
+    
+    
+    
+=======
 //        let feedController = FeedController()
 //        
 //        let navController = UINavigationController(rootViewController: feedController)
@@ -39,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -2,11 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
+<<<<<<< HEAD
+      "filename" : "TJ_SQ_10_07_17_02.png",
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
+=======
       "filename" : "gameofthrones_splash@2x.png",
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
       "scale" : "2x"
     },
     {

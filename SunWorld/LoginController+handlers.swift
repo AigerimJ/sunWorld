@@ -18,12 +18,34 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
             return
         }
         
+<<<<<<< HEAD
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user: User?, error) in
+
+=======
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
             
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
             if error != nil {
                 print(error!)
                 return
             }
+<<<<<<< HEAD
+
+            guard let uid = user?.uid else {
+                return
+            }
+
+            //successfully authenticated user
+            let imageName = UUID().uuidString
+            let storageRef = Storage.storage().reference().child("profile_images").child("\(imageName).jpg")
+
+            if let profileImage = self.profileImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1) {
+
+                //            if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {
+
+                storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+
+=======
             
             guard let uid = user?.uid else {
                 return
@@ -39,15 +61,24 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
                 
                 storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
                     
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
                     if error != nil {
                         print(error!)
                         return
                     }
+<<<<<<< HEAD
+
+                    if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+
+                        let values = ["name": name, "email": email, "profileImageUrl": profileImageUrl]
+
+=======
                     
                     if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
                         
                         let values = ["name": name, "email": email, "profileImageUrl": profileImageUrl]
                         
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
                         self.registerUserIntoDatabaseWithUID(uid, values: values as [String : AnyObject])
                     }
                 })
@@ -56,7 +87,11 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
     }
     
     fileprivate func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
+<<<<<<< HEAD
+        let ref = Database().reference()
+=======
         let ref = FIRDatabase.database().reference()
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         let usersReference = ref.child("users").child(uid)
         
         usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in

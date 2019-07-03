@@ -7,6 +7,8 @@
 //
 
 import Foundation
+<<<<<<< HEAD
+=======
 //
 //  LoginController.swift
 //  gameofchats
@@ -15,6 +17,7 @@ import Foundation
 //  Copyright © 2016 letsbuildthatapp. All rights reserved.
 //
 
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 import UIKit
 import Firebase
 
@@ -58,7 +61,11 @@ class LoginController: UIViewController {
             return
         }
         
+<<<<<<< HEAD
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+=======
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
             
             if error != nil {
                 print(error ?? "")
@@ -113,7 +120,11 @@ class LoginController: UIViewController {
     
     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
+<<<<<<< HEAD
+        imageView.image = #imageLiteral(resourceName: "gameofthrones_splash")
+=======
         imageView.image = UIImage(named: "gameofthrones_splash")
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         
@@ -222,9 +233,13 @@ class LoginController: UIViewController {
         //need x, y, width, height constraints
         emailTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive = true
         emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor).isActive = true
+<<<<<<< HEAD
+        emailTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+=======
         
         emailTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
         
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
         emailTextFieldHeightAnchor = emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3)
         
         emailTextFieldHeightAnchor?.isActive = true

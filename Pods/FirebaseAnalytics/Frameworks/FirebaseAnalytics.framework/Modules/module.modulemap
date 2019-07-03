@@ -4,7 +4,10 @@ framework module FirebaseAnalytics {
   module * { export *}
   link "sqlite3"
   link "z"
+<<<<<<< HEAD
+=======
   link framework "CoreGraphics"
   link framework "Foundation"
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
   link framework "UIKit"
 }

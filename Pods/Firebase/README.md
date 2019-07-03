@@ -64,13 +64,20 @@ CocoaPods is used to install and manage dependencies in existing Xcode projects.
    ```
    pod 'Firebase/AdMob'
    pod 'Firebase/Analytics'
+<<<<<<< HEAD
+=======
    pod 'Firebase/AppIndexing'
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
    pod 'Firebase/Auth'
    pod 'Firebase/Crash'
    pod 'Firebase/Database'
    pod 'Firebase/DynamicLinks'
    pod 'Firebase/Invites'
    pod 'Firebase/Messaging'
+<<<<<<< HEAD
+   pod 'Firebase/Performance'
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
    pod 'Firebase/RemoteConfig'
    pod 'Firebase/Storage'
    ```

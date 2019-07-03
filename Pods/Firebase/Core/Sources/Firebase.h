@@ -37,6 +37,13 @@
     #import <FirebaseMessaging/FirebaseMessaging.h>
   #endif
 
+<<<<<<< HEAD
+  #if __has_include(<FirebasePerformance/FirebasePerformance.h>)
+    #import <FirebasePerformance/FirebasePerformance.h>
+  #endif
+
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
   #if __has_include(<FirebaseRemoteConfig/FirebaseRemoteConfig.h>)
     #import <FirebaseRemoteConfig/FirebaseRemoteConfig.h>
   #endif
@@ -49,4 +56,15 @@
     #import <GoogleMobileAds/GoogleMobileAds.h>
   #endif
 
+<<<<<<< HEAD
+  #if __has_include(<Fabric/Fabric.h>)
+    #import <Fabric/Fabric.h>
+  #endif
+
+  #if __has_include(<Crashlytics/Crashlytics.h>)
+    #import <Crashlytics/Crashlytics.h>
+  #endif
+
+=======
+>>>>>>> 709af5596380714c95f70c131124c9c363840824
 #endif  // defined(__has_include)
